@@ -45,7 +45,7 @@ public class Grafo {
 		for (int i = 0; i < this.qtdVertices; i++) {
 			System.out.print(this.vertices.get(i) + ":\t");
 			for (int j = 0; j < this.qtdVertices; i++) {
-				if(this.matriz[i][j] != 0) {
+				if (this.matriz[i][j] != 0) {
 					System.out.print(this.vertices.get(j) + "\t");
 				}
 			}
@@ -58,7 +58,7 @@ public class Grafo {
 	
 	private boolean testaCaminhoProfundidade(int no, int destino, ArrayList<String> visitados) {
 		for (int col = 0; col < this.qtdVertices; col++) {
-			if(this.matriz[no][col] != 0 && !visitados.contains(this.vertices.get(col))) {
+			if (this.matriz[no][col] != 0 && !visitados.contains(this.vertices.get(col))) {
 				if(col == destino) return true;
 				System.out.println(this.vertices.get(col));
 				visitados.add(this.vertices.get(col));
@@ -108,16 +108,16 @@ public class Grafo {
 	            	linha = linha.toUpperCase();
 	                dadosLinha = linha.split("@"); 
 	                linhas.add(linha);
-	                if(!vertices.contains(dadosLinha[0])) {
+	                if (!vertices.contains(dadosLinha[0])) {
 	                	vertices.add(dadosLinha[0]);
 	                }
-	                if(!vertices.contains(dadosLinha[1])) {
+	                if (!vertices.contains(dadosLinha[1])) {
 	                	vertices.add(dadosLinha[1]);
 	                }
 	            }
 	            arquivo.close();
 	            vertices.sort(null);
-	        } catch(Exception e) {
+	        } catch (Exception e) {
 	            System.out.println(e);
 	        }
 	    }
