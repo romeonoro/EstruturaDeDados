@@ -51,7 +51,7 @@ public class Grafo {
 			}
 			System.out.println("");
 		}
-		for(int i = 0; i < this.qtdVertices; i++) {
+		for (int i = 0; i < this.qtdVertices; i++) {
 			System.out.println(i + ": " + vertices.get(i));
 		}
 	}
