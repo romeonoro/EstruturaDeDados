@@ -36,7 +36,7 @@ public class Grafo {
 		}
 			System.out.println("");
 		}
-		for(int i = 0; i < this.qtdVertices; i++) {
+		for (int i = 0; i < this.qtdVertices; i++) {
 			System.out.println(i + ": " + vertices.get(i));
 		}
 	}
@@ -81,7 +81,7 @@ public class Grafo {
 		String nomeOrigem, nomeDestino;
 		int indiceOrigem, indiceDestino;
 		int custo;
-		for(String linha : linhas) {
+		for (String linha : linhas) {
 			dadosLinha = linha.split("@");
 			nomeOrigem = dadosLinha[0];
 			nomeDestino = dadosLinha[1];
@@ -118,7 +118,7 @@ public class Grafo {
 	            arquivo.close();
 	            vertices.sort(null);
 	        } catch(Exception e) {
-	            System.out.println(e.getMessage());
+	            System.out.println(e);
 	        }
 	    }
 	}
